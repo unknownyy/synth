@@ -45,7 +45,7 @@
       dragging = true
       var x = event.pageX
       synth.triggerAttack(x)
-      label.innerHTML = x.toFixed(9).toString() + 'Hz'
+      label.innerHTML = x + 'Hz'
     }
     function up(event) {
       dragging = false
@@ -56,7 +56,7 @@
       if (dragging) {
         var x = event.pageX
         synth.setNote(x)
-        label.innerHTML = x.toFixed(9).toString() + 'Hz'
+        label.innerHTML = x + 'Hz'
       }
     }
 
