@@ -29,7 +29,7 @@
 
   <body>
     <div id="pad">
-      <div id="label">Click or Drag for Fun</div>
+      <div id="label">GO CLICK</div>
     </div>
   </body>
 
@@ -45,18 +45,18 @@
       dragging = true
       var x = event.pageX
       synth.triggerAttack(x)
-      label.innerHTML = Math.round(x) + 'Hz'
+      label.innerHTML = x + 'Hz'
     }
     function up(event) {
       dragging = false
       synth.triggerRelease()
-      label.innerHTML = 'CLICK / DRAG'
+      label.innerHTML = 'KEEP CLICKING'
     }
     function move(event) {
       if (dragging) {
         var x = event.pageX
         synth.setNote(x)
-        label.innerHTML = Math.round(x) + 'Hz'
+        label.innerHTML = x + 'Hz'
       }
     }
 
